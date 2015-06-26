@@ -41,7 +41,7 @@ function KeyCheck(e) {
         },
         onload: function(response) {
           var dom = $.parseHTML(response.responseText);
-          console.log($(dom).find('.mw-body-content p:first').text());
+          console.log($(dom).find('.mw-body-content p:eq(1)').text());
         }
     } );
   }
