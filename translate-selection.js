@@ -20,10 +20,10 @@ function KeyCheck(e) {
         },
         onload: function(response) {
           var dom = $.parseHTML(response.responseText);
-          console.log('* `' + selection + '`: ' + $(dom).find('.transExpB li').map( function() {
+          console.info('* `' + selection + '`: ' + $(dom).find('.transExpB li').map( function() {
                 return $(this).text();
           } ).get().join(', '));
-          $(dom).find('.translatedTextAreaLn span').each(function() { console.log( '- ' + $(this).text()); } );
+          $(dom).find('.translatedTextAreaLn span').each(function() { console.info( '- ' + $(this).text()); } );
         }
     } );
   }
@@ -31,7 +31,7 @@ function KeyCheck(e) {
   if(e.keyCode === 87) {
     var selection = window.getSelection();
     var url = 'https://ja.wikipedia.org/w/index.php?search=' +  encodeURIComponent(selection);
-    console.log(url);
+    console.info(url);
     GM_xmlhttpRequest( {
         method: 'GET',
         url: url,
@@ -41,7 +41,7 @@ function KeyCheck(e) {
         },
         onload: function(response) {
           var dom = $.parseHTML(response.responseText);
-          console.log($(dom).find('.mw-body-content p:eq(1)').text());
+          console.info($(dom).find('.mw-body-content p:eq(1)').text());
         }
     } );
   }
