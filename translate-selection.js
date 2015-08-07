@@ -1,6 +1,6 @@
 // ==UserScript==
-// @name        TranslateSelection
-// @namespace   Akata
+// @name        translate-selection
+// @namespace   akata
 // @include     *
 // @version     1
 // @grant       GM_xmlhttpRequest
