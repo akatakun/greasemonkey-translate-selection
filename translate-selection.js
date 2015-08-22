@@ -7,8 +7,8 @@
 // @require     http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
 // ==/UserScript==
 function KeyCheck(e) {
-  // When press 'e' key, translate selection with Weblio.
-  if(e.keyCode === 69) {
+  // When press 'a' key, translate selection with Weblio.
+  if(e.keyCode === 65) {
     var selection = window.getSelection();
     GM_xmlhttpRequest( {
         method: 'POST',
